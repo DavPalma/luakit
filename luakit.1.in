@@ -5,8 +5,8 @@
 .ds cmdname luakit
 .ds manname LUAKIT
 .ds version LUAKITVERSION
-.ds year 2012
-.ds date \*[year]-10-10
+.ds year 2020
+.ds date \*[year]-10-24
 .ds appauthors Mason Larobina <mason.larobina@gmail.com>
 .ds manauthors Pierre Neidhardt <ambrevar@gmail.com>
 .
@@ -95,8 +95,13 @@ Ignore libunique bindings.
 .BR -u ", " --uri = \fIURI\fR
 URI(s) to load at startup.
 .TP
+.BR -l ", " --log = \fILOGLEVEL\fR
+.TQ
+.BR -l ", " --log = \fIGROUP\fR=\fILOGLEVEL\fR[,\fIGROUP\fR=\fILOGLEVEL\fR\&...\&]
+Specify log level (fatal, error, warn, info, verbose, debug).
+.TP
 .BR -v ", " --verbose
-Print debugging output.
+Print verbose output.
 .TP
 .BR -V ", " --version
 Print version and exit.
@@ -325,27 +330,11 @@ order:
 .P
 Default configuration files:
 .TP
-.I binds.lua
-The keyboard and mouse bindings.
-.TP
-.I globals.lua
-General configuration, like home page, search engines, user agent, per-domain
-properties, cookies policy.
-.TP
-.I modes.lua
-All default modes are set in this file.
-.TP
 .I rc.lua
 Main configuration files. All other files are loaded from there.
 .TP
 .I theme.lua,
 Colors definition.
-.TP
-.I webview.lua
-WebKit related.
-.TP
-.I window.lua
-Status bar, windows and tabs behaviour.
 .P
 Embedded userscript will be loaded from \fI$XDG_DATA_DIRS/luakit/lib\fR.
 .P
